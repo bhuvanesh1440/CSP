@@ -3,10 +3,10 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    
+    background-color: black;
 } 
 body {
-    background-image: url('../../../assets/hdwallpapers.jpg');
+    background-image: url('../../assets/hdwallpapers.jpg');
     background-size: 100% 100%;
    
  } 
@@ -63,26 +63,21 @@ body {
     width: 100%;
 }
 
-.content{
+/* .content{
     width: 100%;
     color: white;
-    padding-top: 30%;
-    /* transform: translateY(-50%); */
-    /* transform: translate(100px, 100px); */
+    position: absolute;
+    top: 50%;
+   
+    transform: translateY(-50%);
     text-align: center;
-    /* position: relative;
-    top:0px;*/
-    bottom: 100px;;
-     
 
 }
 
 .content h1{
-   
+    margin-top: 80px;
     font-size: 70px;
-    /* margin-left: 300px; */
-
-   
+    margin-left: 500px;
 }
 
 .content p{
@@ -93,11 +88,10 @@ body {
 button{
     width: 200px;
     padding: 15px 0;
-    
     text-align: center;
-    margin: 30px 10px;
+    margin: 20px 10px;
     border-radius: 25px;
-    border: 2px solid white;
+    border: 2px solid #ffeba7;
 
     background: transparent;
     color:white;
@@ -110,7 +104,7 @@ span{
     position: absolute;
     left: 0;
     top: 0;
-    background-color:white;
+    background-color:#ffeba7;
     width: 0;
     height: 100%;
     border-radius: 25px;
@@ -126,5 +120,57 @@ button:hover span{
 button:hover{
     border: none;
     color: black;
-    background-color: white;
+} */
+
+
+/* .footer{
+    padding: 20px 9%;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer .box-container .box{
+    flex:1 1 250px;
+
+}
+
+
+.footer .box-container .box h3{
+   color: #333;
+   font-size: 25px;
+   padding: 10px 0;
+    
+}
+.footer .box-container .box a {
+    display: block;
+    color:#666;
+    font-size: 15px;
+    padding: 10px 0;
+	text-decoration:none;
+     
+ }
+ .footer .box-container .box a:hover {
+    text-decoration: underline;
+    color:#e84393;
+   
+ }
+
+ .footer .credit{
+    text-align: center;
+    padding-left: 30%;
+    margin-top: 15px;
+    padding-top: 25px;
+    font-size: 20px;
+    color: #333;
+    border-top: 1ps solid rgba(0,0,0,0.1);
+}
+ */

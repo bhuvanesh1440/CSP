@@ -25,48 +25,92 @@ export class LoginComponent implements OnInit {
   };
   u_name:string='';
   pass:string='';
+  a:string='';
+  b:string='';
   UpdatedUser: UserDetails = {
     u_name: '',
     u_mail: '',
     pass:'' 
   };
   Results = [];
-  Read(User:UserLogin) {
+  Read() {
     
-    this.Service.Read(this.User.u_name,this.User.pass).subscribe({
-      next: (Data: Read) => {
-        this.Results = Data.Result;
-        this.GotResult = true;
-      },
-      error: (Err) => {
-        console.log(Err);
-      },
-    });
-  }
-  Update(RollNumber: String, Details: UserDetails) {
-    this.Service.Update(RollNumber, Details).subscribe({
-      next: (Data) => {
-        console.log(Data);
-        
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
-  }
-  Delete(Roll: String) {
-    this.Service.Delete(Roll).subscribe({
-      next: (Data: InsertedSuccess) => {
-        console.log(Data.rowsAffected);
-        
-      },
-      error: (Error) => {
-        console.log(Error);
-      },
-    });
-  }
+    this.a=this.u_name;
+  this.b=this.pass;
+    this.Service.Read(this.u_name).subscribe({
+          next: (Data: Read) => {
+          this.Results = Data.Result;
+          this.GotResult = true;
+          console.log(this.Results); 
+          if(this.Results[0]==this.pass){
+            this.router.navigate(['/main']);
+            console.log("hiiiiiiiiiii")
+          }else{
+              alert("Invalid username or Password");
+            }
+          
+        },
+        error: (Err) => {
+          console.log(Err);
+        },
+      });
+      console.log("hi");
+     
+      
+      if(this.Results[0] == this.pass){
+        this.router.navigate(['/main']);
+        console.log("hiiiiiiiiiii")
+      }
+      // else{
+      //   alert("Invalid username or Password");
+      // }
 
-}
+    }
+
+  }
+    
+    // this.Service.Read(this.User.u_name,this.User.pass).subscribe({
+    //   next: (Data: Read) => {
+    //     this.Results = Data.Result;
+    //     this.GotResult = true;
+    //   },
+    //   error: (Err) => {
+    //     console.log(Err);
+    //   },
+    // });
+  //   this.a=this.u_name;
+  // this.b=this.pass;
+  //   this.Service.Read(this.User.u_name,this.User.pass).subscribe({
+    //   next: (Data: Read) => {
+    //     this.Results = Data.Result;
+    //     this.GotResult = true;
+    //   },
+    //   error: (Err) => {
+    //     console.log(Err);
+  //   //   },
+  //   this.Service.Update(RollNumber, Details).subscribe({
+  //     next: (Data) => {
+  //       console.log(Data);
+        
+  //     },
+  //     error: (err) => {
+  //       console.log(err);
+  //     },
+  //   });
+  // }
+  // Delete(Roll: String) {
+  //   this.Service.Delete(Roll).subscribe({
+  //     next: (Data: InsertedSuccess) => {
+  //       console.log(Data.rowsAffected);
+        
+  //     },
+  //     error: (Error) => {
+  //       console.log(Error);
+  //     },
+  //   });
+  // }
+
+// }
 
 
 

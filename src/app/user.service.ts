@@ -43,14 +43,10 @@ export class CRUDService {
       { headers: this.headers }
     );
   }
-  Read(u_name:string,pass:string): Observable<Read> {
-    let params = new HttpParams();
-    params = params.set('param1', u_name);
-    params = params.set('param2', pass);
-    console.log(u_name);
-    console.log(pass);
+  Read(u_name:string): Observable<Read> {
     
-    return this.http.get<Read>(`${this.url}Students/Read,`,{ params },
+    
+    return this.http.get<Read>(`${this.url}Students/Read${u_name}`
   
     );
   }

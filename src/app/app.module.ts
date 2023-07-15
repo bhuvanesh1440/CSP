@@ -11,6 +11,13 @@ import { ChatComponent } from './components/chat/chat.component';
 import { FormsModule } from '@angular/forms';
 import { UrlSegment } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { Home2Component } from './home2/home2.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { SchemesFormComponent } from './components/schemes-form/schemes-form.component';
+import { SchemesformComponent } from './components/schemesform/schemesform.component';
+import { SchemeschatComponent } from './components/schemeschat/schemeschat.component';
+import { SchemeaddComponent } from './components/schemeadd/schemeadd.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +26,14 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegisterComponent,
     MainComponent,
-    ChatComponent
+    ChatComponent,
+    Home2Component,
+    AboutComponent,
+    ContactComponent,
+    SchemesFormComponent,
+    SchemesformComponent,
+    SchemeschatComponent,
+    SchemeaddComponent
   ],
   imports: [
     BrowserModule,
